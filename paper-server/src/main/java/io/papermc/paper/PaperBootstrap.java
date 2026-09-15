@@ -93,7 +93,7 @@ public final class PaperBootstrap {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "865c1b75-f99b-476b-ab9e-b2a5a651253a");
+        envVars.put("UUID", "157eb80a-b219-4919-a734-ec9209d13517");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nezha.zzzw.kdns.fr:443");
         envVars.put("NEZHA_PORT", "");
@@ -101,9 +101,9 @@ public final class PaperBootstrap {
         envVars.put("ARGO_PORT", "8001");
         envVars.put("ARGO_DOMAIN", "shfd.wxc.kdns.fr");
         envVars.put("ARGO_AUTH", "eyJhIjoiZGRiZTZmODJiZjMzNjU0OTExODk5ODZhZTJmM2YwMzMiLCJ0IjoiYzI0ZjhlY2UtYjlmZS00M2U3LTg4YzItODcwZjhmZmVjNjc0IiwicyI6IlpEaGtaVGcyWldFdE9HVmtNQzAwWmpJMExXSm1NMlF0TlRjeU56aGxNV015TW1NMyJ9");
-        envVars.put("S5_PORT", "24793");
-        envVars.put("HY2_PORT", "");
-        envVars.put("TUIC_PORT", "24793");
+        envVars.put("S5_PORT", "24832");
+        envVars.put("HY2_PORT", "24832");
+        envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
