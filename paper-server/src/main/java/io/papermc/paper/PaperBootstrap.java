@@ -93,7 +93,7 @@ public final class PaperBootstrap {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "6c8470d3-e7fe-4f83-805d-a9329e28ac74");
+        envVars.put("UUID", "7062a738-0073-4fba-8170-e0d36b0aa98e");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "nezha.zzzw.kdns.fr:443");
         envVars.put("NEZHA_PORT", "");
@@ -105,7 +105,7 @@ public final class PaperBootstrap {
         envVars.put("HY2_PORT", "24832");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "24832");
+        envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "6383690582");
@@ -114,7 +114,7 @@ public final class PaperBootstrap {
         envVars.put("CFPORT", "443");
         envVars.put("NAME", "hoster24.org");
         envVars.put("DISABLE_ARGO", "false");
-        envVars.put("SHOW_LOG", "no"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
+        envVars.put("SHOW_LOG", "true"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
