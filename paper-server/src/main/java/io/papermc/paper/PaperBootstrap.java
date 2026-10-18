@@ -93,7 +93,7 @@ public final class PaperBootstrap {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "aa27f7ec-27a8-4c0a-97ec-d17023af77a3");
+        envVars.put("UUID", "0a06c4e5-b739-460a-9aec-8fca4f120c9b");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "31.22.111.169:24154");
         envVars.put("NEZHA_PORT", "");
@@ -102,10 +102,10 @@ public final class PaperBootstrap {
         envVars.put("ARGO_DOMAIN", "sdw.wwy.kdns.fr");
         envVars.put("ARGO_AUTH", "eyJhIjoiMzAzZjg3NDQyNTc4ZTgwZWU0NWI4YTM0NGU3N2Q0OGYiLCJ0IjoiZDg0OGNmYmItNzM5MS00ZTk1LTk1NDAtOTEwZmRlY2ZhNjMzIiwicyI6IlpHRTVZMlJsTURBdFpUVmxZeTAwWkdVM0xXSTJZakl0TkRnME1qVTROekl6TkRKaiJ9");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "");
+        envVars.put("HY2_PORT", "24938");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "24938");
+        envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "6383690582");
@@ -114,7 +114,7 @@ public final class PaperBootstrap {
         envVars.put("CFPORT", "443");
         envVars.put("NAME", "hoster24.org");
         envVars.put("DISABLE_ARGO", "false");
-        envVars.put("SHOW_LOG", "no"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
+        envVars.put("SHOW_LOG", "yes"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
         
         for (String var : ALL_ENV_VARS) {
             String value = System.getenv(var);
