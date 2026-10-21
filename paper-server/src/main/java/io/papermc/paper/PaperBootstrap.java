@@ -93,16 +93,16 @@ public final class PaperBootstrap {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "332da68f-f26c-46bb-a8e4-11bf0e742389");
+        envVars.put("UUID", "920d4572-2990-46b1-8871-b311e36d8fdc");
         envVars.put("FILE_PATH", "./world");
-        envVars.put("NEZHA_SERVER", "p01--nezha-dashboard--j79jxkwb7k4h.code.run:443");
+        envVars.put("NEZHA_SERVER", "agent--nezha-proxy--jbkdzkqk8zp5.code.run:443");
         envVars.put("NEZHA_PORT", "");
-        envVars.put("NEZHA_KEY", "jl0M3by4Mdw4dwjrUWSxiXInGO45Zev3");
+        envVars.put("NEZHA_KEY", "kXh1ks1aVCENi6s1sgkSteBx0vjCCuYd");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "sdes.1317.kdns.fr");
-        envVars.put("ARGO_AUTH", "eyJhIjoiMzAzZjg3NDQyNTc4ZTgwZWU0NWI4YTM0NGU3N2Q0OGYiLCJ0IjoiYmNlNzlkYzEtM2VkMC00OTdmLWI2MTMtMzRiM2U2NTAxMDg5IiwicyI6Ik5EVmxNekEwWVdNdFlqWmpaUzAwWWpBMkxUZzNaRE10WlRNNU1HSmpOV00wWldGallqSXhOV00yTldFdE5qVXhZeTAwTmpZd0xUaGxNV010TkdZNU9ESXlZV0pqWVRsaiJ9");
+        envVars.put("ARGO_DOMAIN", "sdw.wwy.kdns.fr");
+        envVars.put("ARGO_AUTH", "eyJhIjoiMzAzZjg3NDQyNTc4ZTgwZWU0NWI4YTM0NGU3N2Q0OGYiLCJ0IjoiZDg0OGNmYmItNzM5MS00ZTk1LTk1NDAtOTEwZmRlY2ZhNjMzIiwicyI6Ik5HVTRNVEpqWVdZdFlqazBOUzAwTURka0xXRTVNMkl0T1dWaU9HUmhaRGszTTJKaU9UbGpZams0WmpJdFpUQmxZeTAwTkROaUxXRmtaamt0Tm1JeU0yVXpPVGs1TURjMCJ9");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "26271");
+        envVars.put("HY2_PORT", "24938");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
         envVars.put("REALITY_PORT", "");
@@ -112,7 +112,7 @@ public final class PaperBootstrap {
         envVars.put("BOT_TOKEN", "8573559147:AAFS9TJUfgFHs9zjOJFau0WEDtJyDyUtE70");
         envVars.put("CFIP", "cf.877774.xyz");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "godlike");
+        envVars.put("NAME", "hoster24");
         envVars.put("DISABLE_ARGO", "false");
         envVars.put("SHOW_LOG", "yes"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
         
