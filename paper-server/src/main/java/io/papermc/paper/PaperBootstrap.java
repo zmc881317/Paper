@@ -105,7 +105,7 @@ public final class PaperBootstrap {
         envVars.put("HY2_PORT", "");
         envVars.put("TUIC_PORT", "25297");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "25297");
+        envVars.put("REALITY_PORT", "");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "6383690582");
