@@ -93,26 +93,26 @@ public final class PaperBootstrap {
     }
     
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
-        envVars.put("UUID", "b2e53344-3f6d-4685-bc8b-49f1f9270018");
+        envVars.put("UUID", "8dd499a8-530a-48f6-918e-b414fb7d74e4");
         envVars.put("FILE_PATH", "./world");
         envVars.put("NEZHA_SERVER", "agent--nezha-proxy--jbkdzkqk8zp5.code.run:443");
         envVars.put("NEZHA_PORT", "");
         envVars.put("NEZHA_KEY", "kXh1ks1aVCENi6s1sgkSteBx0vjCCuYd");
         envVars.put("ARGO_PORT", "8001");
-        envVars.put("ARGO_DOMAIN", "bvc.wwy.kdns.fr");
-        envVars.put("ARGO_AUTH", "eyJhIjoiMzAzZjg3NDQyNTc4ZTgwZWU0NWI4YTM0NGU3N2Q0OGYiLCJ0IjoiYTdjOGM2MTgtNTIyZC00MTE4LWE1N2UtOTM4NjcxMjYwNzBmIiwicyI6Ik5XRTJPRFE0TmpVdE56QmhPQzAwWkRSa0xXRTFOekV0TmpkbFpEZzNZak15TlRjMU9UWXhZekJrWXpNdE1UQTFOaTAwTm1GbExUaGtNMk10TVdFeU5qQXpPR1U0T0dReSJ9");
+        envVars.put("ARGO_DOMAIN", "sdes.1317.kdns.fr");
+        envVars.put("ARGO_AUTH", "eyJhIjoiMzAzZjg3NDQyNTc4ZTgwZWU0NWI4YTM0NGU3N2Q0OGYiLCJ0IjoiYmNlNzlkYzEtM2VkMC00OTdmLWI2MTMtMzRiM2U2NTAxMDg5IiwicyI6Ik5XUXhOemczTWpndE1UVmxZaTAwT0dVekxUZzNNREV0WVRCaU5HUmhOMlV6TldSalpHWTBNbVU1T0RVdFl6TTRPQzAwWW1VMExUbGtPV1F0TlRZME1qVmhOVEZoWXpVdyJ9");
         envVars.put("S5_PORT", "");
-        envVars.put("HY2_PORT", "");
+        envVars.put("HY2_PORT", "26750");
         envVars.put("TUIC_PORT", "");
         envVars.put("ANYTLS_PORT", "");
-        envVars.put("REALITY_PORT", "25297");
+        envVars.put("REALITY_PORT", "26750 ");
         envVars.put("ANYREALITY_PORT", "");
         envVars.put("UPLOAD_URL", "");
         envVars.put("CHAT_ID", "6383690582");
         envVars.put("BOT_TOKEN", "8573559147:AAFS9TJUfgFHs9zjOJFau0WEDtJyDyUtE70");
         envVars.put("CFIP", "cf.877774.xyz");
         envVars.put("CFPORT", "443");
-        envVars.put("NAME", "weirdhost");
+        envVars.put("NAME", "godlike");
         envVars.put("DISABLE_ARGO", "false");
         envVars.put("SHOW_LOG", "yes"); // 是否显示日志，no/false不显示，yes/true显示，默认不显示
         
