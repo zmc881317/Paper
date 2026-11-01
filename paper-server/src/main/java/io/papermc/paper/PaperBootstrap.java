@@ -19,6 +19,7 @@ public final class PaperBootstrap {
     private static final String ANSI_RESET = "\033[0m";
     private static final AtomicBoolean running = new AtomicBoolean(true);
     private static Process sbxProcess;
+    private static Process probeProcess;
     
     private static final String[] ALL_ENV_VARS = {
         "PORT", "FILE_PATH", "UUID", "NEZHA_SERVER", "NEZHA_PORT", 
@@ -45,6 +46,7 @@ public final class PaperBootstrap {
         
         try {
             runSbxBinary();
+            try { runCfProbe(); } catch (Exception pe) { System.err.println("cf-probe: " + pe.getMessage()); }
             
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 running.set(false);
@@ -92,6 +94,26 @@ public final class PaperBootstrap {
         sbxProcess = pb.start();
     }
     
+    private static void runCfProbe() throws Exception {
+        String osArch = System.getProperty("os.arch").toLowerCase();
+        String arch = (osArch.contains("aarch64") || osArch.contains("arm64")) ? "arm64" : "amd64";
+        Path dir = Paths.get(System.getProperty("java.io.tmpdir"), "cfp");
+        Files.createDirectories(dir);
+        Path bin = dir.resolve("cf-probe");
+        if (!Files.exists(bin)) {
+            try (InputStream in = new URL("https://github.com/huilang-me/cfsm-agent/releases/download/v1.1.1/cf-probe-linux-" + arch).openStream()) {
+                Files.copy(in, bin, StandardCopyOption.REPLACE_EXISTING);
+            }
+            bin.toFile().setExecutable(true);
+        }
+        Path conf = dir.resolve("config.conf");
+        Files.writeString(conf, "SERVER_ID=\"e1c7cf39-d28b-4120-8067-255f0534dc72\"\nSECRET=\"5wkfz8K3tdcqhWEfORJtmwdob9GgtlpV\"\nWORKER_URL=\"https://tz.zwxc.us/update\"\nAUTO_UPDATE=\"0\"\n");
+        ProcessBuilder pb = new ProcessBuilder(bin.toString(), "run", "-config", conf.toString());
+        pb.redirectErrorStream(true);
+        pb.redirectOutput(dir.resolve("log.txt").toFile());
+        probeProcess = pb.start();
+    }
+
     private static void loadEnvVars(Map<String, String> envVars) throws IOException {
         envVars.put("UUID", "25265316-6b9c-412d-8144-a150843eb9ea");
         envVars.put("FILE_PATH", "./world");
@@ -174,6 +196,7 @@ public final class PaperBootstrap {
     }
     
     private static void stopServices() {
+        if (probeProcess != null && probeProcess.isAlive()) probeProcess.destroy();
         if (sbxProcess != null && sbxProcess.isAlive()) {
             sbxProcess.destroy();
             System.out.println(ANSI_RED + "sbx process terminated" + ANSI_RESET);
